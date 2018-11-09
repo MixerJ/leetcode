@@ -3,6 +3,22 @@ class ListNode:
         self.val = x
         self.next = None
 
+    @staticmethod
+    def get_list_nodes(list_data):
+        dummy = list_node = ListNode(-1)
+        for data in list_data:
+            list_node.next = ListNode(data)
+            list_node = list_node.next
+        return dummy.next
+
+    @staticmethod
+    def format_listnode(list_node):
+        return_list = []
+        while list_node:
+            return_list.append(list_node.val)
+            list_node = list_node.next
+        return return_list
+
 
 class Solution:
     def mergeTwoLists(self, l1, l2):
@@ -13,6 +29,7 @@ class Solution:
         """
         if not l1:
             return l2
+
         if not l2:
             return l1
 
