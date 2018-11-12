@@ -3,7 +3,7 @@ import unittest
 from sample.programs.number_27 import Solution
 
 
-class TestNumber26(unittest.TestCase):
+class TestNumber27(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 
