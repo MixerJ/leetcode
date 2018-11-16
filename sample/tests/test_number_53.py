@@ -8,8 +8,10 @@ class TestNumber53(unittest.TestCase):
         self.solution = Solution()
 
     def test_success(self):
-        self.assertEqual(self.solution.countAndSay(1), "1")
-        self.assertEqual(self.solution.countAndSay(4), "1211")
+        self.assertEqual(self.solution.maxSubArray(
+            [-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6)
+        self.assertEqual(self.solution.maxSubArray(
+            [-1]), -1)
 
 
 if __name__ == '__main__':
